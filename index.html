@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>آکادمی سرمایه‌گذاری نکس</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body {
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+            direction: rtl;
+            background: #f4f6f8;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+        .header {
+            background: #1A2A3A;
+            color: white;
+            padding: 30px 20px 20px;
+            text-align: center;
+        }
+        .logo {
+            max-width: 120px;
+            margin-bottom: 8px;
+            border-radius: 12px;
+        }
+        .header h1 {
+            font-size: 26px;
+            margin: 6px 0 0;
+        }
+        .header p {
+            color: #D4AF37;
+            font-size: 16px;
+            margin: 4px 0 0;
+        }
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            background: #f9fafb;
+            padding: 16px 15px;
+            border-bottom: 1px solid #e9edf2;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        .nav button {
+            background: #1A2A3A;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.25s;
+            font-family: inherit;
+        }
+        .nav button:hover {
+            background: #D4AF37;
+            color: #1A2A3A;
+        }
+        .nav button.active {
+            background: #D4AF37;
+            color: #1A2A3A;
+        }
+        .page {
+            display: none;
+            padding: 35px 28px;
+            border-bottom: 1px solid #eef2f6;
+            animation: fadeIn 0.35s ease;
+        }
+        .page:last-of-type {
+            border-bottom: none;
+        }
+        .page.active {
+            display: block;
+        }
+        .page h2 {
+            color: #1A2A3A;
+            font-size: 22px;
+            border-right: 6px solid #D4AF37;
+            padding-right: 16px;
+            margin-bottom: 22px;
+        }
+        .box {
+            background: #f9fafc;
+            padding: 22px 26px;
+            border-radius: 20px;
+            border-right: 6px solid #D4AF37;
+            line-height: 1.9;
+        }
+        .box-dark {
+            background: #1A2A3A;
+            color: white;
+            padding: 22px 26px;
+            border-radius: 20px;
+            text-align: center;
+            line-height: 2;
+        }
+        .box-dark a {
+            color: #D4AF37;
+            text-decoration: none;
+        }
+        .box-dark a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            background: #f9fafb;
+            text-align: center;
+            padding: 18px;
+            font-size: 13px;
+            color: #555;
+            border-top: 1px solid #e9edf2;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.3; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 20px; }
+            .page { padding: 24px 16px; }
+            .nav button { padding: 8px 14px; font-size: 12px; }
+            .logo { max-width: 90px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER با لوگو -->
+    <div class="header">
+        <img src="https://raw.githubusercontent.com/nexinvest/nexinvest/main/qwe.jpg" alt="لوگوی نکس" class="logo"/>
+        <h1>آکادمی سرمایه‌گذاری نکس</h1>
+        <p>نکس، فراتر از یک تحلیل</p>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="nav">
+        <button onclick="showPage('home')" class="active" id="btn-home">خانه</button>
+        <button onclick="showPage('consulting')" id="btn-consulting">مشاوره</button>
+        <button onclick="showPage('courses')" id="btn-courses">دوره‌ها</button>
+        <button onclick="showPage('news')" id="btn-news">تحلیل اخبار</button>
+        <button onclick="showPage('about')" id="btn-about">درباره ما</button>
+        <button onclick="showPage('contact')" id="btn-contact">ارتباط با ما</button>
+    </div>
+
+    <!-- ===== خانه ===== -->
+    <div id="page-home" class="page active">
+        <h2>به نکس خوش آمدید</h2>
+        <div class="box">
+            <p style="font-size:17px; font-weight:500; color:#1A2A3A;">
+                اینجا قراره سرمایه‌گذاری رو جور دیگه انجام بدی.
+            </p>
+            <p style="margin-top:8px;">
+                با نگاه عمیق، تحلیل هوشمندانه و برنامه‌ریزی حرفه‌ای، مسیر موفقیت در بازارهای مالی رو هموار کن.
+            </p>
+            <p style="margin-top:12px; font-weight:500; color:#1A2A3A;">
+                با آکادمی نکس، گام بعدی رو در مسیر سرمایه‌گذاری هوشمند بردار.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== مشاوره ===== -->
+    <div id="page-consulting" class="page">
+        <h2>مشاوره سرمایه‌گذاری</h2>
+        <div class="box">
+            <p><strong>مشاوره تخصصی سرمایه‌گذاری</strong></p>
+            <p>با یک جلسه مشاوره هوشمندانه، گام بعدی رو در مسیر سرمایه‌گذاری محکم بردار.</p>
+            <p><strong>🕒 مدت مشاوره:</strong> نیم‌ساعت</p>
+            <p><strong>💰 مبلغ مشاوره:</strong> ۲۰۰,۰۰۰ تومان</p>
+            <p><strong>📞 جهت هماهنگی:</strong> <a href="tel:09188563814" style="color:#1A2A3A; font-weight:700;">۰۹۱۸۸۵۶۳۸۱۴</a></p>
+            <p><strong>⏰ پاسخگویی:</strong> ۱۶ تا ۲۰</p>
+        </div>
+    </div>
+
+    <!-- ===== دوره‌ها ===== -->
+    <div id="page-courses" class="page">
+        <h2>دوره‌های آموزشی</h2>
+        <div class="box">
+            <p style="font-size:17px; font-weight:500; color:#1A2A3A;">دوره‌های تخصصی نکس به‌زودی برگزار خواهد شد.</p>
+            <p>برای اطلاع از تاریخ برگزاری و ثبت‌نام، با پشتیبانی تماس بگیرید:</p>
+            <p style="font-size:18px; font-weight:700; color:#1A2A3A;">📞 ۰۹۱۸۸۵۶۳۸۱۴</p>
+        </div>
+    </div>
+
+    <!-- ===== تحلیل اخبار ===== -->
+    <div id="page-news" class="page">
+        <h2>تحلیل اخبار و سرمایه‌گذاری هوشمند</h2>
+        <div class="box">
+            <p style="font-weight:500; font-size:16px; color:#1A2A3A;">
+                جهت پیوستن به کانال اختصاصی تحلیل اخبار و مشاوره روزانه برای سبد سرمایه‌گذاری، به کانال ما در <strong>روبیکا</strong> بپیوندید.
+            </p>
+            <ul style="list-style:none; padding:0; margin:12px 0 8px;">
+                <li>✅ <strong>یک هفته رایگان</strong> – فرصت تست</li>
+                <li>✅ هزینه اشتراک ماهانه: <strong>۳۰۰,۰۰۰ تومان</strong></li>
+            </ul>
+            <p style="background:#eef2f6; padding:14px 18px; border-radius:16px; color:#1A2A3A; font-weight:500;">
+                📬 جهت دریافت لینک کانال، نام و نام خانوادگی و شماره تماس خود را به شماره <strong>۰۹۱۸۸۵۶۳۸۱۴</strong> ارسال کنید.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== درباره ما ===== -->
+    <div id="page-about" class="page">
+        <h2>درباره ما</h2>
+        <div class="box">
+            <p><strong>مهندس سعیدرضا حمزه‌لو</strong></p>
+            <p>
+                ایشان با سابقه‌ی تحصیل در شیمی و فعالیت مستمر در بازارهای مالی ایران و جهان، 
+                آکادمی نکس را با هدف ارائه‌ی تحلیل‌های عمیق و آموزش سرمایه‌گذاری هوشمندانه راه‌اندازی کرده‌اند.
+            </p>
+            <p style="margin-top:10px;">
+                در نکس، تحلیل‌های سطحی جایی ندارند؛ اینجا جای نگاه عمیق، تصمیم‌گیری هوشمندانه و حرکت در مسیر رشد مالی است.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== ارتباط با ما ===== -->
+    <div id="page-contact" class="page">
+        <h2>ارتباط با ما</h2>
+        <div class="box-dark">
+            <p>📧 <a href="mailto:shochemist1379@gmail.com">shochemist1379@gmail.com</a></p>
+            <p>📱 <a href="https://rubika.ir/nexinvest" target="_blank">@nexinvest</a> (روبیکا)</p>
+            <p>📞 <a href="tel:09188563814">۰۹۱۸۸۵۶۳۸۱۴</a></p>
+            <p style="margin-top:10px; color:#ddd; font-size:14px;">پاسخگویی ۱۶ تا ۲۰</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        &copy; ۱۴۰۴ - آکادمی سرمایه‌گذاری نکس | تمامی حقوق محفوظ است.
+    </div>
+
+</div>
+
+<script>
+    function showPage(id) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+
+        const target = document.getElementById('page-' + id);
+        if (target) target.classList.add('active');
+
+        const btn = document.getElementById('btn-' + id);
+        if (btn) btn.classList.add('active');
+    }
+</script>
+
+</body>
+                                              </html>
